@@ -1,0 +1,79 @@
+@use './assets/util/variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: Rubik, sans-serif;
+}
+
+body {
+    background: variables.$Very-light-gray;
+    position: relative;
+
+    main { 
+        display: flex;
+        justify-content: center;
+
+        .form-container {
+            background: variables.$White;
+            width: 100%;
+            border-radius: .6rem;
+            height: 9rem;
+            padding: 1.5rem;
+
+            form {
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+
+                img {
+                    width: 2.5rem;
+                    margin: 0 1rem 0 0;
+                }
+
+                textarea {
+                    border: 1px solid variables.$Light-gray;
+                    border-radius: .5rem;
+                    outline: transparent;
+
+                    width: 100%;
+                    height: 100%;
+
+                    padding: .8rem 1.5rem;
+
+                    &:focus {
+                        border: 1px solid variables.$Dark-blue;
+                    }
+                }
+
+                button {
+                    background: variables.$Moderate-blue;
+                    border-radius: .5rem;
+                    color: variables.$White;
+                    margin: 0 0 0 1rem;
+                    padding: .9rem 1.8rem;
+
+                    transition: background .2s ease-out;
+
+                    &:hover {
+                        background: variables.$Light-grayish-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
