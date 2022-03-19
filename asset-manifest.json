@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/InteractiveComments-FrontendMentor/static/css/main.4c9d92ed.css",
+    "main.js": "/InteractiveComments-FrontendMentor/static/js/main.03f37e1e.js",
+    "index.html": "/InteractiveComments-FrontendMentor/index.html",
+    "static/media/icon-plus.svg": "/InteractiveComments-FrontendMentor/static/media/icon-plus.7cfc81e4af67223f63c528b310236412.svg",
+    "static/media/icon-edit.svg": "/InteractiveComments-FrontendMentor/static/media/icon-edit.b0c7f9ebaec367bd3ae2539df8b55ff9.svg",
+    "static/media/icon-reply.svg": "/InteractiveComments-FrontendMentor/static/media/icon-reply.bfb4589d45cd96abd45e3b82f7e7bbc6.svg",
+    "static/media/icon-minus.svg": "/InteractiveComments-FrontendMentor/static/media/icon-minus.4aa6933cb1575b3c54fa67d84a61efaf.svg",
+    "static/media/icon-delete.svg": "/InteractiveComments-FrontendMentor/static/media/icon-delete.86cedbf2e37529f9c8f1f744254059b0.svg",
+    "main.4c9d92ed.css.map": "/InteractiveComments-FrontendMentor/static/css/main.4c9d92ed.css.map",
+    "main.03f37e1e.js.map": "/InteractiveComments-FrontendMentor/static/js/main.03f37e1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c9d92ed.css",
+    "static/js/main.03f37e1e.js"
+  ]
+}
