@@ -10,17 +10,22 @@ import getComments from '../../api/comments';
 
 
 const Comments = () => {
-    const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState(JSON.parse(localStorage.getItem('comments')) || []);
     const { currentUser } = useContext(UserContext);
 
-    // Get the data from a 'API'
+    // Verify if there data before and otherwise get the data from a 'API'
     useEffect(() => {
-        getComments().then(data => {
-            setComments(data);
-        })
+        if (!JSON.parse(localStorage.getItem('comments'))) {
+            getComments().then(data => {
+                setComments(data);
+            })
+        }
     }, []);
 
-    // Save the changes on localStorage
+    // Save the changes on localStorage everytime comments state change
+    useEffect(() => {
+        localStorage.setItem('comments', JSON.stringify(comments))
+    }, [comments])
 
     // This works for add and reply to comments
     const addComment = (comment, parentId = null, replyingToUser = null) => {
@@ -104,13 +109,21 @@ const Comments = () => {
     return (
         <section className="comment-section">
             <ul className="comment-list">
-                {commentElements}
+                {
+                    commentElements || 
+
+                    <h1>
+                        Opps, looks like there's no comment here yet,
+                        maybe you should be the first one!
+                    </h1>
+                }
             </ul>
 
             <CommentInput
-                nameLabel="SEND"
-                placeholder="Add a comment..."
-                handleSubmit={addComment} />
+             nameLabel="SEND"
+             placeholder="Add a comment..."
+             handleSubmit={addComment} 
+            />
         </section>
     )
 }

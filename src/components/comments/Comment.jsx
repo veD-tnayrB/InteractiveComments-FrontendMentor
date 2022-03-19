@@ -69,11 +69,13 @@ const Comment = ({ comment, loadedComments, addComment, editComment, deleteComme
                         <button 
                          className="minus-button"
                          onClick={() => changeScore(comment.id, false)}
-                         disabled={!itsLikedFromTheCurrentUser}>
+                         disabled={!itsLikedFromTheCurrentUser}
+                        >
 
                             <img 
                              src={minusIcon}
-                             alt="minus icon" />
+                             alt="minus icon" 
+                            />
 
                         </button>
                     </div>
